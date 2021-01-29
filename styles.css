@@ -4,18 +4,17 @@ body {
 h1 {
     color: red;
     font-family: Georgia;
-    margin-left: 75vh;
+    display: flex;
+    justify-content: center;
 }
 .friend {
     background: rgba(255, 0, 0, 0.418);
-}
-h3 {
+    display: flex;
+    justify-content: center;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 88.5vh;
 }
 p {
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 90vh;
+    display: flex; 
+    justify-content: center;
 }
