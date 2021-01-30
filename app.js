@@ -17,20 +17,28 @@ function sing() {
         friendDiv.className = 'friend';
         document.body.appendChild(friendDiv);
 
-        for (let lineNumber = 99; lineNumber > 0; lineNumber--) {
-            if (lineNumber > 1) {
+        for (let j = 99; j > 0; j--) {
+            if (j > 1) {
                 let songP = document.createElement('p');
-                let songPText = document.createTextNode(lineNumber + " lines of code in the file, " + lineNumber + " lines of code; " + friends[i] +' strikes one out, clears it all out, ' + lineNumber + " lines of code in the file.");
+                let songPText = document.createTextNode(j + " lines of code in the file, " + j + " lines of code; " + friends[i] +' strikes one out, clears it all out, ' + j + " lines of code in the file.");
                 songP.appendChild(songPText);
-                songP.className = [i];
-                songP.id = lineNumber
+                songP.className = j;
+                songP.id = [i] + j;
+
+                let lyricColor = "rgb(155, 102, " + j + ")";
+                
+                songP.style.color = lyricColor;
                 document.body.appendChild(songP);
             } else {
                 let songP = document.createElement('p');
-                let songPText = document.createTextNode(lineNumber + " line of code in the file, " + lineNumber + " line of code; " + friends[i] +' strikes one out, clears it all out, ' + lineNumber + " line of code in the file.");
+                let songPText = document.createTextNode(j + " line of code in the file, " + j + " line of code; " + friends[i] +' strikes one out, clears it all out, ' + j + " line of code in the file.");
                 songP.appendChild(songPText);
-                songP.className = "lyrics"
-                songP.id = [i] + ' ' + lineNumber
+                songP.className = [i];
+                songP.id = [i] + j;
+
+                let lyricColor = "rgb(155, 102, " + j + ")";
+
+                songP.style.color = lyricColor;
                 document.body.appendChild(songP);
             };
         };
